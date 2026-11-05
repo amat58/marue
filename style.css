@@ -1,0 +1,396 @@
+@charset "UTF-8";
+
+/* 共通部分
+------------------------------- */
+html {
+  font-size: 100%;
+}
+body {
+  font-family: "Cormorant Garamond", "Noto Sans JP", serif;
+  line-height: 1.7;
+  color: #6d5a4c;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+
+/* レイアウト */
+.wrapper {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+.align-center {
+  text-align: center;
+}
+
+/* 見出し */
+.font-english {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-weight: normal;
+}
+.page-title,
+.heading-large,
+.heading-medium {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.page-title {
+  margin-top: 2rem;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+.heading-large {
+  margin-bottom: 1rem;
+}
+
+/* ボタン */
+.btn {
+  display: inline-block;
+  font-size: 1.5rem;
+  background-color: #9b8a7b;
+  color: #e8dfd4;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  transition: 0.5s;
+  margin-bottom: 3.5rem;
+  margin-top: 2rem;
+}
+.btn:hover {
+  background-color: #6d5a4c;
+}
+/* ヘッダー
+------------------------------- */
+.page-header {
+  padding-top: 0rem;
+}
+.logo {
+  width: 125px;
+}
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  font-size: 0.8rem;
+  list-style: none;
+}
+.main-nav a {
+  color: #6d5a4c;
+}
+.main-nav a:hover {
+  color: #9b8a7b;
+}
+
+/* ヘッダーカバー画像
+------------------------------- */
+.cover {
+  background-size: cover;
+  background-position: center bottom;
+  height: 800px;
+}
+.look {
+  background-size: cover;
+  background-position: center bottom;
+  height: 600px;
+}
+
+/* HOME
+------------------------------- */
+.cover-home {
+  background-image: url(images/top3.PNG);
+}
+.look-home {
+  background-image: url(images/keirtaitop.jpg);
+}
+.collection-home {
+  background-image: url(images/keitaitop3.PNG);
+}
+.about {
+  max-width: 736px;
+  padding: 0 1.5rem;
+  margin: 3rem auto 0;
+}
+.about p {
+  margin-bottom: 1rem;
+  padding: 44px 20px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 2.1;
+  background: #e8dfd4;
+}
+
+.product-name {
+  font:
+    14px "Cormorant Garamond",
+    serif;
+  margin: 12px 0 5px;
+}
+.detail {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* about
+------------------------------- */
+.about-photo {
+  border-radius: 30px;
+  margin-bottom: 1.5rem;
+}
+.news {
+  max-width: 1500px;
+  padding: 0 1.5rem;
+  margin: 3rem auto 0;
+}
+.news-p {
+  margin-bottom: 1rem;
+  padding: 44px 20px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 2.1;
+  background: #e8dfd4;
+}
+
+/* サイドバー */
+
+/* ↓ 追加 ↓ ------------------------------- */
+.grid {
+  display: grid;
+  gap: 2rem 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+}
+.item img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.item p {
+  font-size: 0.875rem;
+}
+
+/* フッター
+------------------------------- */
+.page-footer {
+  background-image: url(images/back1.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-top: 12rem;
+  margin-top: 5rem;
+}
+.info {
+  width: 100%;
+  max-width: 544px;
+  margin: auto;
+  padding: 0 1.5rem;
+  border-spacing: 0;
+}
+.info th,
+.info td {
+  border-bottom: 1px solid #c9c2bc;
+}
+.info th {
+  text-align: left;
+  font-weight: normal;
+  padding: 1rem;
+}
+.info td {
+  padding: 1rem 0;
+}
+.copyright {
+  background-color: #432;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 6rem;
+  color: #fff;
+}
+/*contact*/
+.location {
+  margin-bottom: 3.5rem;
+  margin-left: 3%;
+}
+.location-map {
+  width: 100%;
+}
+.location-info {
+  margin-bottom: 2rem;
+}
+.location-info .info {
+  padding: 0;
+}
+.sns-item {
+  margin-bottom: 2rem;
+}
+.sns-item .heading-medium {
+  margin-bottom: 0.5rem;
+}
+.sns-youtube {
+  aspect-ratio: 16/9;
+}
+.sns-youtube iframe {
+  height: 100%;
+}
+iframe {
+  width: 100%;
+}
+/* デスクトップ版
+------------------------------- */
+@media (min-width: 800px) {
+  .grid {
+    gap: 3rem 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .item img {
+    margin-bottom: 0.5rem;
+  }
+  .item p {
+    font-size: 1rem;
+  }
+  .item-big {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+  /* CONTACT */
+  .location {
+    display: flex;
+    gap: 2rem;
+  }
+  .location-info {
+    width: 32%;
+  }
+  .location-info .info th {
+    padding-left: 2rem;
+  }
+  .location-map {
+    width: 64%;
+  }
+  .item-big img {
+    height: 94.5%;
+    width: 100%;
+  }
+  .ad {
+    display: block;
+  }
+  .ad_s {
+    display: none;
+  }
+  /* 見出し */
+  .page-title {
+    font-size: 3rem;
+  }
+  .heading-large {
+    font-size: 4rem;
+  }
+  .post-title {
+    font-size: 2rem;
+  }
+
+  /* ヘッダー */
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+  }
+  .logo {
+    width: 210px;
+  }
+  .main-nav {
+    font-size: 2rem;
+    gap: 3.5rem;
+  }
+
+  /* ヘッダーカバー画像 */
+  .sub-cover {
+    height: 400px;
+    margin-bottom: 6rem;
+  }
+
+  /* HOME */
+  .cover-home {
+    background-image: url(images/top.PNG);
+  }
+  .look-home {
+    background-image: url(images/desktop.jpg);
+  }
+  .look {
+    background-position: center top;
+    height: 900px;
+  }
+  .collection-home {
+    background-image: url(images/desktop3.PNG);
+  }
+  .about {
+    margin: 4rem auto 0;
+  }
+  .product-name {
+    font:
+      20px "Cormorant Garamond",
+      serif;
+    margin: 12px 0 5px;
+  }
+  .detail {
+    font-size: 16px;
+    color: var(--muted);
+  }
+  .news {
+    display: flex;
+    justify-content: space-between;
+  }
+  .about-photo {
+    width: 70%;
+  }
+  .news-p {
+    width: 22%;
+    line-height: 1;
+  }
+  /* NEWS */
+  .news-p {
+    margin-bottom: 2rem;
+    padding: 44px 15px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 2.1;
+    background: #e8dfd4;
+  }
+
+  /* フッター */
+  .page-footer {
+    background-image: url(images/back2.jpg);
+    padding-top: 12rem;
+  }
+  .info th {
+    padding-left: 2.5rem;
+  }
+  .item-big {
+    grid-column: 1/3;
+  }
+  .location {
+    display: flex;
+    gap: 2rem;
+  }
+  .location-info {
+    width: 34%;
+  }
+  .location-info .info th {
+    padding-left: 2rem;
+  }
+  .location-map {
+    width: 80%;
+    height: 10%;
+  }
+  .email {
+    margin-bottom: 4rem;
+  }
+  .sns {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 0;
+  }
+  .sns-item {
+    flex: 0.5;
+  }
+}
+/*CONTACT----------*/
