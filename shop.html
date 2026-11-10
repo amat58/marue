@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>MARUÉ | Dog Apparel</title>
+    <meta name="description" content="犬のアパレルブランド" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="images/png" href="images/dog.png" />
+
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+
+    <!-- Googleフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- オリジナルCSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="cover cover-home">
+      <header class="page-header wrapper">
+        <h1 class="align-center">
+          <a href="index.html"
+            ><img class="logo" src="images/rogo.PNG" alt="MARUÉアパレルブランド"
+          /></a>
+        </h1>
+        <nav>
+          <ul class="main-nav font-english">
+            <li><a href="collection.html">COLLECTION</a></li>
+            <li><a href="lookbook.html">LOOKBOOK</a></li>
+            <li><a href="size.html">SIZE GUIDE</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+             <li><a href="contact.html">CONTACT</a></li>
+             <li> <button class="cart-open" onclick="openCart()">BAG (<span id="cart-count">0</span>)</button></li>
+          </ul>
+        </nav>
+      </header>
+<section class="hero"><p class="eyebrow">A LITTLE SOMETHING FOR YOUR BELOVED</p><h1>ONLINE SHOP</h1><p>お気に入りの一着を見つけてください。</p></section>
+<main><p class="intro">毎日の何気ない瞬間を、少しだけ特別に。<br>MARUÉのやさしいドッグウェアコレクション。</p>
+
+<!--
+【写真の追加方法】
+1. HTMLファイルと同じ場所に「images」というフォルダを作る
+2. 商品写真をその中に入れる
+3. 写真ファイル名を product-01.jpg ～ product-06.jpg にする
+4. 画像を変えたい場合は、各カードの img src="images/product-01.jpg" の部分を書き換える
+※jpg / png / webp が使えます。拡張子も実際のファイル名と合わせてね。
+-->
+
+<div class="products">
+<!-- 商品01：写真は images/product-01.jpg -->
+<article class="card"><div class="photo"><img src="images/new7.jpg" alt="商品01" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="photo-placeholder" style="display:none"></div></div><h2>Teddy Ribbon Dress</h2><p class="price">¥4,500 <small>(tax included)</small></p><div class="controls"><select id="size-1"><option>XS</option><option>S</option><option selected>M</option><option>L</option><option>XL</option></select><button class="add" onclick="addToCart(1)">ADD TO CART</button></div></article>
+<!-- 商品02：写真は images/product-02.jpg -->
+<article class="card"><div class="photo"><img src="images/new8.jpg" alt="商品02" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="photo-placeholder" style="display:none"></div></div><h2>Milky Blue Knit</h2><p class="price">¥5,800 <small>(tax included)</small></p><div class="controls"><select id="size-2"><option>XS</option><option>S</option><option selected>M</option><option>L</option><option>XL</option></select><button class="add" onclick="addToCart(2)">ADD TO CART</button></div></article>
+<!-- 商品03：写真は images/product-03.jpg -->
+<article class="card"><div class="photo"><img src="images/new9.jpg" alt="商品03" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="photo-placeholder" style="display:none"></div></div><h2>Cherry Blossom Dress</h2><p class="price">¥4,200 <small>(tax included)</small></p><div class="controls"><select id="size-3"><option>XS</option><option>S</option><option selected>M</option><option>L</option><option>XL</option></select><button class="add" onclick="addToCart(3)">ADD TO CART</button></div></article>
+<!-- 商品04：写真は images/product-04.jpg -->
+<article class="card"><div class="photo"><img src="images/new10.jpg" alt="商品04" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="photo-placeholder" style="display:none"></div></div><h2>Classic Ribbon Blouse</h2><p class="price">¥4,500 <small>(tax included)</small></p><div class="controls"><select id="size-4"><option>XS</option><option>S</option><option selected>M</option><option>L</option><option>XL</option></select><button class="add" onclick="addToCart(4)">ADD TO CART</button></div></article>
+<!-- 商品05：写真は images/product-05.jpg -->
+<article class="card"><div class="photo"><img src="images/new11.jpg" alt="商品05" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="photo-placeholder" style="display:none"></div></div><h2>Petit Frill Dress</h2><p class="price">¥3,900 <small>(tax included)</small></p><div class="controls"><select id="size-5"><option>XS</option><option>S</option><option selected>M</option><option>L</option><option>XL</option></select><button class="add" onclick="addToCart(5)">ADD TO CART</button></div></article>
+<!-- 商品06：写真は images/product-06.jpg -->
+<article class="card"><div class="photo"><img src="images/new12.jpg" alt="商品06" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="photo-placeholder" style="display:none"></div></div><h2>Daily Border Tee</h2><p class="price">¥4,800 <small>(tax included)</small></p><div class="controls"><select id="size-6"><option>XS</option><option>S</option><option selected>M</option><option>L</option><option>XL</option></select><button class="add" onclick="addToCart(6)">ADD TO CART</button></div></article>
+</div>
+<p class="notice">※こちらはショッピング機能の動作確認用デモサイトです。実際の注文・決済は行われません。</p>
+<section class="checkout" id="checkout"><h2>CHECKOUT</h2><p class="intro">お届け先情報を入力してください。</p><div class="formbox"><p class="demo-note">DEMO SHOP：入力内容は送信・保存されず、決済も発生しません。注文完了画面の確認用です。</p><label>お名前</label><input id="customer" placeholder="例）山田 花子"><label>メールアドレス</label><input id="email" type="email" placeholder="hello@example.com"><label>住所</label><input id="address" placeholder="都道府県・市区町村・番地"><div id="checkout-total" class="sumline total"></div><button class="primary" onclick="placeOrder()">PLACE ORDER</button><button class="secondary" onclick="backToShop()">お買い物に戻る</button></div></section>
+<section class="complete" id="complete"><p class="eyebrow">THANK YOU</p><h2>ORDER COMPLETE</h2><p>こちらはデモ画面です。実際の注文は送信されていません。</p><button class="primary" onclick="backToShop()">CONTINUE SHOPPING</button></section>
+</main>
+      <div class="align-center">
+        <a class="btn" href="lookbook.html">LOOKBOOK </a>
+      </div>
+
+    <footer class="page-footer">
+      <h3 class="heading-large font-english">INFORMATION</h3>
+      <table class="info">
+        <tr>
+          <th>住所</th>
+          <td>東京都港区六本木 0-0 ◯◯◯</td>
+        </tr>
+        <tr>
+          <th>電話</th>
+          <td>03-1111-XXXX</td>
+        </tr>
+        <tr>
+          <th>営業時間</th>
+          <td>10:00〜20:00</td>
+        </tr>
+        <tr>
+          <th>店休日</th>
+          <td>水曜</td>
+        </tr>
+      </table>
+      <div class="copyright">MARUÉ
+        <small>&copy; <p>HOME　 CONCEPT　 COLLECTION　 ABOUT</p>
+            <p>Instagram　　© MARUÉ dog apparel</p></div></small>
+      </div>
+    </footer>
+
+<div class="overlay" id="overlay" onclick="if(event.target===this)closeCart()"><aside class="drawer"><div class="drawer-head"><h2>SHOPPING BAG</h2><button class="close" onclick="closeCart()">×</button></div><div id="cart-items"></div><div id="cart-summary"></div></aside></div>
+<script>
+const products=[
+{id:1,name:"Teddy Ribbon Dress",price:4500},{id:2,name:"Milky Blue Knit",price:5800},
+{id:3,name:"Cherry Blossom Dress",price:4200},{id:4,name:"Classic Ribbon Blouse",price:4500},
+{id:5,name:"Petit Frill Dress",price:3900},{id:6,name:"Daily Border Tee",price:4800}];
+let cart=JSON.parse(localStorage.getItem("marueDemoCart")||"[]");
+const yen=n=>"¥"+n.toLocaleString("ja-JP");
+function save(){localStorage.setItem("marueDemoCart",JSON.stringify(cart));document.getElementById("cart-count").textContent=cart.reduce((s,x)=>s+x.qty,0)}
+function addToCart(id){let p=products.find(x=>x.id===id),size=document.getElementById("size-"+id).value,found=cart.find(x=>x.id===id&&x.size===size);if(found)found.qty++;else cart.push({id,size,qty:1});save();openCart()}
+function openCart(){renderCart();document.getElementById("overlay").classList.add("show")}
+function closeCart(){document.getElementById("overlay").classList.remove("show")}
+function total(){return cart.reduce((s,x)=>s+products.find(p=>p.id===x.id).price*x.qty,0)}
+function renderCart(){let a=document.getElementById("cart-items"),b=document.getElementById("cart-summary");if(!cart.length){a.innerHTML='<div class="empty">Your shopping bag is empty.<br>お気に入りを見つけてください。</div>';b.innerHTML='<button class="secondary" onclick="closeCart()">CONTINUE SHOPPING</button>';return}
+a.innerHTML=cart.map((x,i)=>{let p=products.find(p=>p.id===x.id);return `<div class="cart-row"><div class="thumb">MARUÉ</div><div><div class="item-name">${p.name}</div><div class="item-meta">SIZE : ${x.size} / ${yen(p.price)}</div><div class="qty"><button onclick="changeQty(${i},-1)">−</button>${x.qty}<button onclick="changeQty(${i},1)">＋</button><button class="remove" onclick="removeItem(${i})">削除</button></div></div><strong>${yen(p.price*x.qty)}</strong></div>`}).join("");
+b.innerHTML=`<div class="sumline"><span>小計</span><span>${yen(total())}</span></div><div class="sumline total"><strong>合計</strong><strong>${yen(total())}</strong></div><button class="primary" onclick="goCheckout()">PROCEED TO CHECKOUT</button><button class="secondary" onclick="closeCart()">CONTINUE SHOPPING</button>`}
+function changeQty(i,d){cart[i].qty+=d;if(cart[i].qty<=0)cart.splice(i,1);save();renderCart()}
+function removeItem(i){cart.splice(i,1);save();renderCart()}
+function goCheckout(){if(!cart.length)return;closeCart();document.getElementById("checkout").classList.add("show");document.getElementById("checkout-total").innerHTML=`<b>合計金額</b><b>${yen(total())}</b>`;document.getElementById("checkout").scrollIntoView({behavior:"smooth"})}
+function placeOrder(){let n=document.getElementById("customer").value.trim(),e=document.getElementById("email").value.trim(),a=document.getElementById("address").value.trim();if(!n||!e||!a){alert("お名前・メールアドレス・住所を入力してください。");return}if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)){alert("メールアドレスをご確認ください。");return}document.getElementById("checkout").classList.remove("show");document.getElementById("complete").classList.add("show");cart=[];save();document.getElementById("complete").scrollIntoView({behavior:"smooth"})}
+function backToShop(){document.getElementById("checkout").classList.remove("show");document.getElementById("complete").classList.remove("show");document.querySelector(".hero").scrollIntoView({behavior:"smooth"})}
+save();
+</script></body></html>
